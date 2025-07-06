@@ -23,6 +23,7 @@ class AdminFactory extends Factory
             'email' => 'shadow902@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('Welc0me!1225'),
+            'remember_token' => Str::random(10),
         ];
     }
 }
