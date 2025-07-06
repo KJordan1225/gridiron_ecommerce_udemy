@@ -38,5 +38,10 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <!-- Custom JS -->
         @yield('scripts')
+        <script>
+            $(document).ready(function() {
+                $('.table').DataTable();
+            })
+        </script>
     </body>
 </html>

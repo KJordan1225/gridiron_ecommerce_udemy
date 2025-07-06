@@ -15,6 +15,25 @@
             </div>
         </li>
         <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#categories-collapse" aria-expanded="false">
+                Categories
+            </button>
+            <div class="collapse" id="categories-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                        <a href="{{ route('admin.categories.index') }}" class="link-body-emphasis d-inline-flex align-items-center text-decoration-none rounded">
+                           <i class="fas fa-list me-1"></i> List Categories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('admin.categories.create') }}" class="link-body-emphasis d-inline-flex align-items-center text-decoration-none rounded">
+                           <i class="fas fa-plus me-1"></i> Add Category
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="mb-1">
             <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
                 Account
             </button>
