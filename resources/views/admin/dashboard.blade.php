@@ -68,9 +68,15 @@
         <div class="row my-3">
             <div class="col-md-12">
                 <!-- chart here -->
+                 {!! $chart->container() !!}
             </div>
         </div>
     </div>
 </div>
 
+@endsection
+
+@section('scripts')
+    <script src="{{ $chart->cdn() }}"></script>
+    {{ $chart->script() }}
 @endsection
