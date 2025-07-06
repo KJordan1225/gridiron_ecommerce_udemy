@@ -6,5 +6,7 @@ use App\Http\Controllers\Admin\AdminController;
 Route::get('admin/login', [AdminController::class,'login'])->name('admin.login');
 Route::post('admin/auth', [AdminController::class,'auth'])->name('admin.auth');
 
+Route::middleware('admin')->group (function() {
+    Route::get('dashboard', [AdminController::class, 'index'])->name('admin.index');
 
-Route::get('dashboard', [AdminController::class,'index'])->name('admin.index');
+});
