@@ -11,18 +11,21 @@ class AddChildcategoryRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
-     */
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|string|max:255|unique:childcategories',
+            'subcategory_id' => 'required|integer|exists:subcategories,id'
+        ];
+    }
+
+    public function messages() : array
+    {
+        return [
+            'subcategory_id.required' => 'Please choose a subcategory'
         ];
     }
 }

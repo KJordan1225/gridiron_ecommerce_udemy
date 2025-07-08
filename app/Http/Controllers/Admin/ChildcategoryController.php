@@ -61,7 +61,8 @@ class ChildcategoryController extends Controller
      * Update the specified resource in storage.
      */
     public function update(UpdateChildcategoryRequest $request, Childcategory $childcategory) : RedirectResponse
-    {
+    {        
+        dd('hit update', $childcategory);
         $childcategory->update($request->validated());
         return to_route('admin.childcategories.index')->with('success','Child category updated successfully');
     }
