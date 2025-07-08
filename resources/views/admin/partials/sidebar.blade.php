@@ -34,6 +34,25 @@
             </div>
         </li>
         <li class="mb-1">
+            <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#subcategories-collapse" aria-expanded="false">
+                Subcategories
+            </button>
+            <div class="collapse" id="subcategories-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                    <li>
+                        <a href="{{ route('admin.subcategories.index') }}" class="link-body-emphasis d-inline-flex align-items-center text-decoration-none rounded">
+                           <i class="fas fa-list me-1"></i> List Subcategories
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('admin.subcategories.create') }}" class="link-body-emphasis d-inline-flex align-items-center text-decoration-none rounded">
+                           <i class="fas fa-plus me-1"></i> Add Subcategory
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+        <li class="mb-1">
             <button class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
                 Account
             </button>
